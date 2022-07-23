@@ -1,15 +1,11 @@
 import React from "react";
+import { Loading } from "@nextui-org/react";
 
 const Spinner = () => {
   return (
     <div className="text-center">
-      <div
-        className="spinner-grow text-primary"
-        style={{ width: "3rem", height: "3rem", color: "red" }}
-        role="status"
-      >
-        <span className="visually-hidden">Loading...</span>
-      </div>
+
+  <Loading size={"lg"}>Loading Please Wait!!</Loading>;
     </div>
   );
 };

@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import News from "./components/News";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
+import { NextUIProvider } from "@nextui-org/react";
 
 const App = () => {
   const pageSize = 13;
@@ -12,8 +13,9 @@ const App = () => {
 
   return (
     <div>
+      <NextUIProvider>
       <Router>
-        <NavBar />
+        <NavBar/>
         <LoadingBar height={3} color="#f11946" progress={progress} />
         <Switch>
           <Route exact path="/">
@@ -98,6 +100,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      </NextUIProvider>
     </div>
   );
 };
